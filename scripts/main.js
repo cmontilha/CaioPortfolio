@@ -62,21 +62,6 @@ window.addEventListener('scroll', () => {
 // AOS init
 AOS.init();
 
-// Dark/light mode
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
-function setTheme(mode){
-    if(mode==='light'){html.classList.remove('dark');themeToggle.textContent='Dark Mode';}
-    else{html.classList.add('dark');themeToggle.textContent='Light Mode';}
-    localStorage.setItem('theme',mode);
-}
-themeToggle.addEventListener('click',()=>{
-    const mode=html.classList.contains('dark')?'light':'dark';
-    setTheme(mode);
-});
-setTheme(localStorage.getItem('theme')||'dark');
-
-// Custom cursor
 const cursor=document.createElement('div');
 cursor.className='custom-cursor';
 document.body.appendChild(cursor);
@@ -139,6 +124,14 @@ const translations={
     'about-text1':{'en':'Computer Science & Business Graduate from Hanover College, Indiana, USA, passionate about leveraging technology to drive innovation and make meaningful social impact. I am committed to continuous learning and consistently seeking to grow technically and professionally.','pt':'Graduado em Computa\u00E7\u00E3o e Neg\u00F3cios pelo Hanover College, Indiana, EUA. Sou apaixonado por usar tecnologia para impulsionar inova\u00E7\u00E3o e impacto social. Busco aprendizado cont\u00EDnuo e crescimento t\u00E9cnico-profissional.'},
     'about-text2':{'en':'My academic experience includes software development, web and mobile applications, algorithm analysis, data structures, databases, information security, cloud computing, and artificial intelligence (with a focus on generative AI). At the same time, my Business major strengthened my skills in marketing strategy, management, financial analysis, and business law, enabling me to bridge technical expertise with business insights.','pt':'Minha forma\u00E7\u00E3o abrange desenvolvimento de software, aplica\u00E7\u00F5es web e mobile, an\u00E1lise de algoritmos, estruturas de dados, bancos de dados, seguran\u00E7a da informa\u00E7\u00E3o, computa\u00E7\u00E3o em nuvem e intelig\u00EAncia artificial (com foco em IA generativa). Em Administra\u00E7\u00E3o, aprofundei estrat\u00E9gias de marketing, gest\u00E3o, an\u00E1lise financeira e direito empresarial, conectando conhecimento t\u00E9cnico a vis\u00E3o de neg\u00F3cios.'},
     'skillsTech':{'en':'Key Skills & Technologies','pt':'Principais Habilidades e Tecnologias'},
+    'skill-prog':{'en':'<strong>Programming:</strong> Proficient in Python and Kotlin; basic knowledge of Java, C++, and R.','pt':'<strong>Programação:</strong> Conhecimento sólido em Python e Kotlin; conhecimento básico em Java, C++ e R.'},
+    'skill-web':{'en':'<strong>Web Development:</strong> HTML, CSS, JavaScript, TypeScript, React, Node.js.','pt':'<strong>Desenvolvimento Web:</strong> HTML, CSS, JavaScript, TypeScript, React, Node.js.'},
+    'skill-db':{'en':'<strong>Database Management:</strong> SQL (MySQL), NoSQL (Firebase).','pt':'<strong>Gerenciamento de Banco de Dados:</strong> SQL (MySQL), NoSQL (MongoDB, Firebase).'},
+    'skill-algo':{'en':'<strong>Algorithms & Data Structures:</strong> Algorithm Analysis, Sorting and Searching Algorithms, Linear and Non-Linear Structures (such as lists, trees, and graphs).','pt':'<strong>Algoritmos e Estruturas de Dados:</strong> Análise de Algoritmos, Algoritmos de Ordenação e Busca, Listas, Pilhas, Filas, Árvores, Grafos.'},
+    'skill-cloud':{'en':'<strong>Cloud & DevOps:</strong> Google Cloud, Docker.','pt':'<strong>Cloud & DevOps:</strong> Google Cloud, Docker'},
+    'biz-header':{'en':'Business Administration & Strategy','pt':'Administração e Estratégia de Negócios'},
+    'biz-text':{'en':'Marketing, Management and Financial Analysis, Agile Strategy, Excel, Power BI.','pt':'Marketing, Gestão e Análise Financeira, Direito e Ética Empresarial, Excel, Power BI'},
+    'languages-list':{'en':'Portuguese (native)<br/>English (fluent)<br/>Spanish (basic)','pt':'Português (nativo)<br/>Inglês (fluente)<br/>Espanhol (básico)'}
     'cat-algorithms':{'en':'Algorithm Analysis','pt':'An\u00E1lise de Algoritmos'},
     'cat-ai':{'en':'Artificial Intelligence','pt':'Intelig\u00EAncia Artificial'},
     'cat-mobile':{'en':'Mobile Applications','pt':'Aplicativos Mobile'},
@@ -154,7 +147,7 @@ const translations={
 function translate(){
     document.querySelectorAll('[data-lang]').forEach(el=>{
         const key=el.getAttribute('data-lang');
-        if(translations[key]) el.textContent=translations[key][currentLang];
+        if(translations[key]) el.innerHTML=translations[key][currentLang];
     });
     langToggle.textContent=currentLang==='en'?'Traduzir para o portugu\u00EAs':'Translate to English';
 }
