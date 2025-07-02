@@ -3,6 +3,44 @@ const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.getElementById('nav-links');
 menuBtn.addEventListener('click', () => navLinks.classList.toggle('hidden'));
 
+// Canvas background particles
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let width, height, particles;
+function resizeCanvas(){
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+function createParticles(){
+  particles = Array.from({length:60},()=>({
+    x:Math.random()*width,
+    y:Math.random()*height,
+    vx:(Math.random()-0.5)*0.7,
+    vy:(Math.random()-0.5)*0.7,
+    size:2+Math.random()*2
+  }));
+}
+function animate(){
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fillRect(0,0,width,height);
+  particles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>width) p.vx*=-1;
+    if(p.y<0||p.y>height) p.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    ctx.fillStyle = '#0ff';
+    ctx.shadowColor = '#0ff';
+    ctx.shadowBlur = 10;
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+resizeCanvas();
+createParticles();
+animate();
+window.addEventListener('resize', ()=>{ resizeCanvas(); createParticles(); });
+
 // Active link on scroll
 const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.nav-link');
@@ -13,8 +51,8 @@ window.addEventListener('scroll', () => {
         if (top >= sec.offsetTop - 60) current = sec.getAttribute('id');
     });
     navItems.forEach(li => {
-        li.classList.remove('text-blue-400');
-        if (li.getAttribute('href') === `#${current}`) li.classList.add('text-blue-400');
+        li.classList.remove('text-teal-400');
+        if (li.getAttribute('href') === `#${current}`) li.classList.add('text-teal-400');
     });
     const progress = document.getElementById('progress');
     const total = document.body.scrollHeight - window.innerHeight;
@@ -59,7 +97,7 @@ const translations={
     'about-title':{'en':'About Me','pt':'Sobre Mim'},
     'about-bio':{'en':'Passionate developer focused on building elegant solutions.','pt':'Desenvolvedor apaixonado focado em criar solu\u00E7\u00F5es elegantes.'},
     'about-location':{'en':'Location: Planet Earth','pt':'Localiza\u00E7\u00E3o: Planeta Terra'},
-    'about-email':{'en':'Email: example@email.com','pt':'Email: exemplo@email.com'},
+    'about-email':{'en':'Email: caiomongelha.cm@gmail.com','pt':'Email: caiomongelha.cm@gmail.com'},
     'projects-title':{'en':'Projects','pt':'Projetos'},
     'project1-title':{'en':'Project One','pt':'Projeto Um'},
     'project1-desc':{'en':'Description for project one.','pt':'Descri\u00E7\u00E3o do projeto um.'},
@@ -104,3 +142,15 @@ function toggleDescription(card){
 document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',()=>toggleDescription(card));
 });
+
+// Contact form submit
+const contactForm = document.getElementById('contact-form');
+if(contactForm){
+  const msg = document.getElementById('form-msg');
+  contactForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}})
+      .then(()=>{msg.textContent='Message sent!';msg.classList.remove('hidden');contactForm.reset();})
+      .catch(()=>{msg.textContent='Error sending message';msg.classList.remove('hidden');});
+  });
+}

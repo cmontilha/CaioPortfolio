@@ -6,9 +6,10 @@
     <title>Developer Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+    <canvas id="bg-canvas" class="fixed inset-0 -z-10"></canvas>
     <div id="progress" class="h-1 bg-blue-500 fixed top-0 left-0 z-50"></div>
     <header class="p-4 flex justify-between items-center bg-gray-800 fixed w-full z-40">
         <div class="flex items-center space-x-4">
@@ -28,10 +29,10 @@
         </nav>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-20 space-y-20">
         <!-- Hero -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?dark,workspace');">
-            <img src="profile.png" alt="Profile picture" class="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-lg">
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center">
+            <img src="assets/images/profile.png" alt="Profile" class="w-40 h-40 rounded-full mb-4 border-4 border-blue-500 shadow-lg">
             <h1 class="text-4xl md:text-6xl font-bold mb-4" data-lang="hero-title">Software Developer & AI Enthusiast</h1>
             <div class="space-x-4">
                 <a href="#resume" class="btn">Resume</a>
@@ -40,7 +41,7 @@
             <div class="mt-6 flex space-x-4">
                 <a href="#" aria-label="LinkedIn" class="social">LI</a>
                 <a href="#" aria-label="GitHub" class="social">GH</a>
-                <a href="mailto:example@email.com" aria-label="Email" class="social">@</a>
+                <a href="mailto:caiomongelha.cm@gmail.com" aria-label="Email" class="social">@</a>
             </div>
         </section>
 
@@ -52,7 +53,7 @@
                     <h2 class="text-3xl font-bold mb-4" data-lang="about-title">About Me</h2>
                     <p class="mb-2" data-lang="about-bio">Passionate developer focused on building elegant solutions.</p>
                     <p class="mb-2" data-lang="about-location">Location: Planet Earth</p>
-                    <p class="mb-4" data-lang="about-email">Email: example@email.com</p>
+                    <p class="mb-4" data-lang="about-email">Email: caiomongelha.cm@gmail.com</p>
                     <div class="flex flex-wrap gap-2" data-lang="about-skills">
                         <span class="tag">Teamwork</span>
                         <span class="tag">Creativity</span>
@@ -66,24 +67,214 @@
         <section id="projects" class="py-20" data-aos="fade-up">
             <div class="container mx-auto">
                 <h2 class="text-3xl font-bold mb-8 text-center" data-lang="projects-title">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/400x300/?code" alt="Project" class="mb-2">
-                        <h3 class="font-semibold" data-lang="project1-title">Project One</h3>
-                        <p class="hidden" data-lang="project1-desc">Description for project one.</p>
-                        <button class="repo-btn">Visit GitHub Repository</button>
+                <div class="space-y-12">
+                    <!-- Category template -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Algorithm Analysis</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?algorithm" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project A1</h4>
+                                <p class="hidden">Description for A1.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?analysis" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project A2</h4>
+                                <p class="hidden">Description for A2.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?data" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project A3</h4>
+                                <p class="hidden">Description for A3.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img src="https://source.unsplash.com/401x300/?programming" alt="Project" class="mb-2">
-                        <h3 class="font-semibold" data-lang="project2-title">Project Two</h3>
-                        <p class="hidden" data-lang="project2-desc">Description for project two.</p>
-                        <button class="repo-btn">Visit GitHub Repository</button>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Artificial Intelligence</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?ai" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project AI1</h4>
+                                <p class="hidden">Description for AI1.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?machine-learning" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project AI2</h4>
+                                <p class="hidden">Description for AI2.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?neural" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Project AI3</h4>
+                                <p class="hidden">Description for AI3.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img src="https://source.unsplash.com/402x300/?app" alt="Project" class="mb-2">
-                        <h3 class="font-semibold" data-lang="project3-title">Project Three</h3>
-                        <p class="hidden" data-lang="project3-desc">Description for project three.</p>
-                        <button class="repo-btn">Visit GitHub Repository</button>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Mobile Applications</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?mobile" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Mobile 1</h4>
+                                <p class="hidden">Description for mobile project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?app" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Mobile 2</h4>
+                                <p class="hidden">Description for mobile project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?android" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Mobile 3</h4>
+                                <p class="hidden">Description for mobile project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Web Development</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?website" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Web 1</h4>
+                                <p class="hidden">Description for web project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?webapp" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Web 2</h4>
+                                <p class="hidden">Description for web project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?frontend" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Web 3</h4>
+                                <p class="hidden">Description for web project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Blockchain & Cryptocurrency</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?blockchain" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Crypto 1</h4>
+                                <p class="hidden">Description for crypto project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?bitcoin" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Crypto 2</h4>
+                                <p class="hidden">Description for crypto project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?ethereum" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Crypto 3</h4>
+                                <p class="hidden">Description for crypto project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Networks and IoT</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?network" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">IoT 1</h4>
+                                <p class="hidden">Description for IoT project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?iot" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">IoT 2</h4>
+                                <p class="hidden">Description for IoT project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?wifi" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">IoT 3</h4>
+                                <p class="hidden">Description for IoT project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Cybersecurity</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?security" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Cyber 1</h4>
+                                <p class="hidden">Description for security project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?hacking" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Cyber 2</h4>
+                                <p class="hidden">Description for security project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?cyber" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Cyber 3</h4>
+                                <p class="hidden">Description for security project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Game Development</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?game" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Game 1</h4>
+                                <p class="hidden">Description for game project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?gaming" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Game 2</h4>
+                                <p class="hidden">Description for game project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?vr" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Game 3</h4>
+                                <p class="hidden">Description for game project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 neon">Desktop Applications</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/400x300/?desktop" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Desktop 1</h4>
+                                <p class="hidden">Description for desktop project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/401x300/?software" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Desktop 2</h4>
+                                <p class="hidden">Description for desktop project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                            <div class="card project-card">
+                                <img src="https://source.unsplash.com/402x300/?pc" class="mb-2" alt="Project">
+                                <h4 class="font-semibold">Desktop 3</h4>
+                                <p class="hidden">Description for desktop project.</p>
+                                <button class="repo-btn">Visit GitHub Repository</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,8 +284,8 @@
         <section id="resume" class="py-20 bg-black" data-aos="fade-up">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-8" data-lang="resume-title">Resume</h2>
-                <a href="CaioMontilhaCSResume2025Updated.pdf" download>
-                    <img src="CaioResumeCS.png" alt="Resume preview" class="mx-auto cursor-pointer transform transition-transform hover:scale-105 w-64">
+                <a href="assets/pdf/CaioMontilhaCSResume2025Updated.pdf" target="_blank">
+                    <img src="assets/images/CaioResumeCS.png" alt="Resume" class="mx-auto cursor-pointer transform transition-transform hover:scale-105 w-64">
                 </a>
             </div>
         </section>
@@ -104,20 +295,20 @@
             <div class="container mx-auto">
                 <h2 class="text-3xl font-bold mb-8 text-center" data-lang="courses-title">Courses & Certificates</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="card">
+                    <div class="card course-card">
                         <h3 class="font-semibold" data-lang="course1-title">Course One</h3>
                         <p class="hidden" data-lang="course1-desc">Description for course one.</p>
-                        <button class="cert-btn">Clique pra ver o certificado</button>
+                        <button class="cert-btn">Click to view certificate</button>
                     </div>
-                    <div class="card">
+                    <div class="card course-card">
                         <h3 class="font-semibold" data-lang="course2-title">Course Two</h3>
                         <p class="hidden" data-lang="course2-desc">Description for course two.</p>
-                        <button class="cert-btn">Clique pra ver o certificado</button>
+                        <button class="cert-btn">Click to view certificate</button>
                     </div>
-                    <div class="card">
+                    <div class="card course-card">
                         <h3 class="font-semibold" data-lang="course3-title">Course Three</h3>
                         <p class="hidden" data-lang="course3-desc">Description for course three.</p>
-                        <button class="cert-btn">Clique pra ver o certificado</button>
+                        <button class="cert-btn">Click to view certificate</button>
                     </div>
                 </div>
             </div>
@@ -127,23 +318,23 @@
         <section id="contact" class="py-20 bg-black" data-aos="fade-up">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-8" data-lang="contact-title">Contact Me</h2>
-                <form class="max-w-xl mx-auto space-y-4">
-                    <input type="text" placeholder="Name" class="input" />
-                    <input type="email" placeholder="Email" class="input" />
-                    <textarea placeholder="Message" class="input"></textarea>
+                <form id="contact-form" class="max-w-xl mx-auto space-y-4" action="https://formspree.io/f/mnqebvne" method="POST">
+                    <input name="name" type="text" placeholder="Name" class="input" required>
+                    <input name="email" type="email" placeholder="Email" class="input" required>
+                    <textarea name="message" placeholder="Message" class="input" required></textarea>
                     <button type="submit" class="btn w-full">Send</button>
+                    <p id="form-msg" class="hidden mt-2 text-green-400">Message sent!</p>
                 </form>
                 <div class="mt-6 flex justify-center space-x-4">
                     <a href="#" aria-label="LinkedIn" class="social">LI</a>
                     <a href="#" aria-label="GitHub" class="social">GH</a>
-                    <a href="mailto:example@email.com" aria-label="Email" class="social">@</a>
+                    <a href="mailto:caiomongelha.cm@gmail.com" aria-label="Email" class="social">@</a>
                 </div>
-                <a href="https://wa.me/123456789" class="whatsapp" aria-label="WhatsApp">WA</a>
             </div>
         </section>
     </main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="app.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
