@@ -62,20 +62,6 @@ window.addEventListener('scroll', () => {
 // AOS init
 AOS.init();
 
-// Dark/light mode
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
-function setTheme(mode){
-    if(mode==='light'){html.classList.remove('dark');themeToggle.textContent='Dark Mode';}
-    else{html.classList.add('dark');themeToggle.textContent='Light Mode';}
-    localStorage.setItem('theme',mode);
-}
-themeToggle.addEventListener('click',()=>{
-    const mode=html.classList.contains('dark')?'light':'dark';
-    setTheme(mode);
-});
-setTheme(localStorage.getItem('theme')||'dark');
-
 // Custom cursor
 const cursor=document.createElement('div');
 cursor.className='custom-cursor';

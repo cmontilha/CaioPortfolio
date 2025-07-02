@@ -4,7 +4,6 @@ This is a simple responsive portfolio website built with **HTML**, **Tailwind CS
 
 - Top navigation bar with language toggle
 - Sections for hero, about, projects, resume, courses & certificates, and contact
-- Dark/light mode toggle
 - Scroll animations using AOS.js
 - Scroll progress indicator and custom cursor
 
