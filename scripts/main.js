@@ -93,11 +93,10 @@ document.querySelectorAll('a,button').forEach(el=>{
 const langToggle=document.getElementById('lang-toggle');
 let currentLang='en';
 const translations={
-    'hero-title':{'en':'Software Developer & AI Enthusiast','pt':'Desenvolvedor de Software & Entusiasta de IA'},
+    'hero-title':{'en':'Tech & Business Communicator | Junior Full-Stack Developer | AI & Data Analytics','pt':'Comunicador de Tecnologia e Negócios | Desenvolvedor Full-Stack Júnior | IA & Análise de Dados'},
     'about-title':{'en':'About Me','pt':'Sobre Mim'},
-    'about-bio':{'en':'Passionate developer focused on building elegant solutions.','pt':'Desenvolvedor apaixonado focado em criar solu\u00E7\u00F5es elegantes.'},
-    'about-location':{'en':'Location: Planet Earth','pt':'Localiza\u00E7\u00E3o: Planeta Terra'},
-    'about-email':{'en':'Email: caiomongelha.cm@gmail.com','pt':'Email: caiomongelha.cm@gmail.com'},
+    'about-location':{'en':'Location: S\u00E3o Paulo, Brazil','pt':'Localiza\u00E7\u00E3o: S\u00E3o Paulo, Brasil'},
+    'about-email':{'en':'Email: caiomontilha.cm@gmail.com','pt':'Email: caiomontilha.cm@gmail.com'},
     'projects-title':{'en':'Projects','pt':'Projetos'},
     'project1-title':{'en':'Project One','pt':'Projeto Um'},
     'project1-desc':{'en':'Description for project one.','pt':'Descri\u00E7\u00E3o do projeto um.'},
