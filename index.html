@@ -19,12 +19,12 @@
         <nav>
             <button id="menu-btn" class="md:hidden text-gray-100 focus:outline-none">☰</button>
             <ul id="nav-links" class="hidden md:flex space-x-6">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#courses" class="nav-link">Courses & Certificates</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-lang="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-lang="nav-about">About</a></li>
+                <li><a href="#projects" class="nav-link" data-lang="nav-projects">Projects</a></li>
+                <li><a href="#resume" class="nav-link" data-lang="nav-resume">Resume</a></li>
+                <li><a href="#courses" class="nav-link" data-lang="nav-courses">Courses & Certificates</a></li>
+                <li><a href="#contact" class="nav-link" data-lang="nav-contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -35,8 +35,8 @@
             <img src="assets/images/profile.png" alt="Profile" class="w-40 h-40 rounded-full mb-4 border-4 border-blue-500 shadow-lg">
             <h1 class="text-4xl md:text-6xl font-bold mb-4" data-lang="hero-title">Tech & Business Communicator | Junior Full-Stack Developer | AI & Data Analytics</h1>
             <div class="space-x-4">
-                <a href="#resume" class="btn">Resume</a>
-                <a href="#projects" class="btn">Portfolio</a>
+                <a href="#resume" class="btn" data-lang="btn-resume">Resume</a>
+                <a href="#projects" class="btn" data-lang="btn-portfolio">Portfolio</a>
             </div>
             <div class="mt-6 flex space-x-4">
                 <a href="#" aria-label="LinkedIn" class="social">LI</a>
@@ -51,13 +51,13 @@
                 <img src="assets/images/CaioAvatar.png" alt="Profile" class="rounded-full w-48 h-48 mb-6 md:mb-0" />
                 <div>
                     <h2 class="text-3xl font-bold mb-4" data-lang="about-title">About Me</h2>
-                    <p class="mb-4">
+                    <p class="mb-4" data-lang="about-text1">
                         Computer Science & Business Graduate from Hanover College, Indiana, USA, passionate about leveraging technology to drive innovation and make meaningful social impact. I am committed to continuous learning and consistently seeking to grow technically and professionally.
                     </p>
-                    <p class="mb-4">
+                    <p class="mb-4" data-lang="about-text2">
                         My academic experience includes software development, web and mobile applications, algorithm analysis, data structures, databases, information security, cloud computing, and artificial intelligence (with a focus on generative AI). At the same time, my Business major strengthened my skills in marketing strategy, management, financial analysis, and business law, enabling me to bridge technical expertise with business insights.
                     </p>
-                    <h3 class="text-xl font-semibold mb-2">Key Skills & Technologies</h3>
+                    <h3 class="text-xl font-semibold mb-2" data-lang="skillsTech">Key Skills & Technologies</h3>
                     <ul class="list-disc list-inside mb-4">
                         <li><strong>Programming:</strong> Proficient in Python and Kotlin; basic knowledge of Java, C++, and R.</li>
                         <li><strong>Web Development:</strong> HTML, CSS, JavaScript, TypeScript, React, Node.js.</li>
@@ -72,8 +72,6 @@
                     <p class="mb-2" data-lang="about-location">Location: São Paulo, Brazil</p>
                     <p class="mb-4" data-lang="about-email">Email: caiomontilha.cm@gmail.com</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">English (Fluent)</span>
-                        <span class="tag">Portuguese (Native)</span>
                         <span class="tag">Artificial Intelligence</span>
                         <span class="tag">Generative AI</span>
                         <span class="tag">Data Structures</span>
@@ -102,250 +100,205 @@
                 <h2 class="text-3xl font-bold mb-8 text-center" data-lang="projects-title">Projects</h2>
                 <div class="space-y-12">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Algorithm Analysis</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-algorithms">Algorithm Analysis</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
-                                <img src="https://source.unsplash.com/400x300/?algorithm" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project A1</h4>
-                                <p class="hidden">Description for A1.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/401x300/?analysis" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project A2</h4>
-                                <p class="hidden">Description for A2.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/402x300/?data" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project A3</h4>
-                                <p class="hidden">Description for A3.</p>
                                 <img src="assets/images/algorithm_preview.png" class="mb-2" alt="Project">
                                 <img src="assets/images/algorithm_preview2.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Algorithm Efficiency Analysis</h4>
                                 <p class="hidden">This project focuses on the study of algorithm efficiency, analyzing time complexity and data structures for various sorting and searching algorithms.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="assets/images/ActorDegreesOfSeparation.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Actor Degrees of Separation</h4>
                                 <p class="hidden">A Java project using the BRIDGES library to explore actor degrees of separation through graph traversal and analysis. It uses BFS algorithm to calculate the shortest path between actors in a movie network and visualizes actor-movie relationships, with node and edge coloring to highlight connections.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Artificial Intelligence</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-ai">Artificial Intelligence</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
-                                <img src="https://source.unsplash.com/400x300/?ai" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project AI1</h4>
-                                <p class="hidden">Description for AI1.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/401x300/?machine-learning" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project AI2</h4>
-                                <p class="hidden">Description for AI2.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/402x300/?neural" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Project AI3</h4>
-                                <p class="hidden">Description for AI3.</p>
                                 <img src="assets/images/basicAIchatbotimg.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Basic AI Chatbot</h4>
                                 <p class="hidden">A full-stack web-based chatbot powered by ChatGPT. Built with Node.js, Express, HTML, CSS, and JavaScript, this project enables real-time interaction with an AI assistant through a clean and responsive chat interface. Ideal for learning how to connect front-end UIs to powerful LLMs like GPT.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="assets/images/AIImageCaption3.png" class="mb-2" alt="Project">
                                 <img src="assets/images/AIImageCaption4.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">AI Image Caption Generator</h4>
                                 <p class="hidden">A web app that generates captions for uploaded images using a pretrained BLIP model. Built with Python and Gradio, and deployed on Hugging Face Spaces. Users can upload an image and get an automatic description.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="assets/images/SimpleAIimg.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Simple AI Chatbot LLM</h4>
                                 <p class="hidden">A simple conversational chatbot powered by an open-source large language model (LLM). Built to demonstrate how natural language interfaces can be integrated with web applications using accessible AI tools.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Mobile Applications</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-mobile">Mobile Applications</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
-                                <img src="https://source.unsplash.com/400x300/?mobile" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Mobile 1</h4>
-                                <p class="hidden">Description for mobile project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/401x300/?app" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Mobile 2</h4>
-                                <p class="hidden">Description for mobile project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
-                            </div>
-                            <div class="card project-card">
-                                <img src="https://source.unsplash.com/402x300/?android" class="mb-2" alt="Project">
-                                <h4 class="font-semibold">Mobile 3</h4>
-                                <p class="hidden">Description for mobile project.</p>
                                 <img src="assets/images/ridesharingprev.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">RideSharingHC</h4>
                                 <p class="hidden">Welcome to my RideSharingHC app, a secure and user-friendly ride-sharing Android app designed specifically for college students. This app allows students to easily coordinate rides within their campus community through verified sign-ups, in-app communication, and real-time navigation. Built using Firebase, Google Maps API, and Jetpack Compose, RideSharingHC focuses on safety.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="assets/images/languagedetectionapp.png" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">LanguageDetectionApp</h4>
                                 <p class="hidden">A SwiftUI iOS application that detects the language of user input using Apple's Natural Language framework. Simple, intuitive interface for detecting the dominant language of any entered text.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="assets/images/game_play.gif" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">LightsOutGame</h4>
                                 <p class="hidden">A simple Android puzzle game where the goal is to turn off all the lights by tapping on a grid. Each tap toggles the state of the clicked light and its adjacent lights, providing an engaging puzzle experience.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Web Development</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-web">Web Development</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?website" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Web 1</h4>
                                 <p class="hidden">Description for web project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?webapp" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Web 2</h4>
                                 <p class="hidden">Description for web project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?frontend" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Web 3</h4>
                                 <p class="hidden">Description for web project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Blockchain & Cryptocurrency</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-blockchain">Blockchain & Cryptocurrency</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?blockchain" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Crypto 1</h4>
                                 <p class="hidden">Description for crypto project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?bitcoin" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Crypto 2</h4>
                                 <p class="hidden">Description for crypto project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?ethereum" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Crypto 3</h4>
                                 <p class="hidden">Description for crypto project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Networks and IoT</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-iot">Networks and IoT</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?network" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">IoT 1</h4>
                                 <p class="hidden">Description for IoT project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?iot" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">IoT 2</h4>
                                 <p class="hidden">Description for IoT project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?wifi" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">IoT 3</h4>
                                 <p class="hidden">Description for IoT project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Cybersecurity</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-cyber">Cybersecurity</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?security" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Cyber 1</h4>
                                 <p class="hidden">Description for security project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?hacking" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Cyber 2</h4>
                                 <p class="hidden">Description for security project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?cyber" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Cyber 3</h4>
                                 <p class="hidden">Description for security project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Game Development</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-game">Game Development</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?game" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Game 1</h4>
                                 <p class="hidden">Description for game project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?gaming" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Game 2</h4>
                                 <p class="hidden">Description for game project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?vr" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Game 3</h4>
                                 <p class="hidden">Description for game project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 neon">Desktop Applications</h3>
+                        <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-desktop">Desktop Applications</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/400x300/?desktop" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Desktop 1</h4>
                                 <p class="hidden">Description for desktop project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/401x300/?software" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Desktop 2</h4>
                                 <p class="hidden">Description for desktop project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                             <div class="card project-card">
                                 <img src="https://source.unsplash.com/402x300/?pc" class="mb-2" alt="Project">
                                 <h4 class="font-semibold">Desktop 3</h4>
                                 <p class="hidden">Description for desktop project.</p>
-                                <button class="repo-btn">Visit GitHub Repository</button>
+                                <button class="repo-btn" data-lang="btn-repo">Visit GitHub Repository</button>
                             </div>
                         </div>
                     </div>
@@ -357,8 +310,12 @@
         <section id="resume" class="py-20" data-aos="fade-up">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-8" data-lang="resume-title">Resume</h2>
+                <div class="space-x-4 mb-4">
+                    <button id="resume-en-btn" class="btn" data-lang="resume-en-btn">English Version</button>
+                    <button id="resume-pt-btn" class="btn" data-lang="resume-pt-btn">Portuguese Version</button>
+                </div>
                 <a href="assets/pdf/CaioMontilhaCSResume2025Updated.pdf" target="_blank">
-                    <img src="assets/images/CaioResumeCS.png" alt="Resume" class="resume-img">
+                    <img id="resume-img" src="assets/images/CaioResumeCS.png" alt="Resume" class="resume-img">
                 </a>
             </div>
         </section>
@@ -369,25 +326,22 @@
                 <h2 class="text-3xl font-bold mb-8 text-center" data-lang="courses-title">Courses & Certificates</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="card course-card">
-                        <h3 class="font-semibold" data-lang="course1-title">Course One</h3>
-                        <img src="assets/images/IBM_AI_DEV_CERT.png" class="mb-2" alt="Project">
                         <h3 class="font-semibold" data-lang="course1-title">IBM AI Developer Professional Certificate</h3>
+                        <img src="assets/images/IBM_AI_DEV_CERT.png" class="mb-2" alt="Project">
                         <p class="hidden" data-lang="course1-desc">Description for course one.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                     <div class="card course-card">
+                        <h3 class="font-semibold" data-lang="course2-title">Agile Software Development Certificate</h3>
                         <img src="assets/images/AgileSoft.Dev.png" class="mb-2" alt="Project">
-                        <h3 class="font-semibold" data-lang="course2-title">Course Two</h3>
                         <p class="hidden" data-lang="course2-desc">Description for course two.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                     <div class="card course-card">
-                        <h3 class="font-semibold" data-lang="course3-title">Course Three</h3>
+                        <h3 class="font-semibold" data-lang="course3-title">Career Essentials in GitHub Professional Certificate</h3>
                         <img src="assets/images/GitHubProfessionalCertificate.png" class="mb-2" alt="Project">
-                        <h3 class="font-semibold" data-lang="course3-title">Career Essentials in GitHub
-                            Professional Certificate</h3>
                         <p class="hidden" data-lang="course3-desc">Description for course three.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                 </div>
 
@@ -395,22 +349,22 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="card course-card">
+                        <h3 class="font-semibold" data-lang="course4-title">[In-person Course, Atlanta] Artificial Intelligence Certificate - Marketing Professionals</h3>
                         <img src="assets/images/AiMARKETINg.png" class="mb-2" alt="Project">
-                        <h3 class="font-semibold" data-lang="course1-title">Artificial Intelligence for Marketing Professionals</h3>
-                        <p class="hidden" data-lang="course1-desc">Description for course one.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <p class="hidden" data-lang="course4-desc">Description for course one.</p>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                     <div class="card course-card">
+                        <h3 class="font-semibold" data-lang="course5-title">Google Foundations of Cybersecurity</h3>
                         <img src="assets/images/Googlecertificate.png" class="mb-2" alt="Project">
-                        <h3 class="font-semibold" data-lang="course2-title">Google Foundations of Cybersecurity</h3>
-                        <p class="hidden" data-lang="course2-desc">Description for course two.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <p class="hidden" data-lang="course5-desc">Description for course two.</p>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                     <div class="card course-card">
+                        <h3 class="font-semibold" data-lang="course6-title">Power BI | Projects</h3>
                         <img src="assets/images/PowerBI.png" class="mb-2" alt="Project">
-                        <h3 class="font-semibold" data-lang="course3-title">Power BI | Projects</h3>
-                        <p class="hidden" data-lang="course3-desc">Description for course three.</p>
-                        <button class="cert-btn">Click to view certificate</button>
+                        <p class="hidden" data-lang="course6-desc">Description for course three.</p>
+                        <button class="cert-btn" data-lang="btn-cert">Click to view certificate</button>
                     </div>
                 </div>
 
@@ -425,7 +379,7 @@
                     <input name="name" type="text" placeholder="Name" class="input" required>
                     <input name="email" type="email" placeholder="Email" class="input" required>
                     <textarea name="message" placeholder="Message" class="input" required></textarea>
-                    <button type="submit" class="btn w-full">Send</button>
+                    <button type="submit" class="btn w-full" data-lang="btn-send">Send</button>
                     <p id="form-msg" class="hidden mt-2 text-green-400">Message sent!</p>
                 </form>
                 <div class="mt-6 flex justify-center space-x-4">

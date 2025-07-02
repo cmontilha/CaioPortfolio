@@ -112,20 +112,51 @@ const translations={
     'exp1':{'en':'2022 - Present: Developer at Company','pt':'2022 - Presente: Desenvolvedor na Empresa'},
     'edu1':{'en':'2018 - 2022: BSc in Computer Science','pt':'2018 - 2022: Bacharelado em Ci\u00EAncia da Computa\u00E7\u00E3o'},
     'courses-title':{'en':'Courses & Certificates','pt':'Cursos & Certificados'},
-    'course1-title':{'en':'Course One','pt':'Curso Um'},
+    'course1-title':{'en':'IBM AI Developer Professional Certificate','pt':'IBM AI Developer Professional Certificate'},
     'course1-desc':{'en':'Description for course one.','pt':'Descri\u00E7\u00E3o do curso um.'},
-    'course2-title':{'en':'Course Two','pt':'Curso Dois'},
+    'course2-title':{'en':'Agile Software Development Certificate','pt':'Agile Software Development Certificate'},
     'course2-desc':{'en':'Description for course two.','pt':'Descri\u00E7\u00E3o do curso dois.'},
-    'course3-title':{'en':'Course Three','pt':'Curso Tr\u00EAs'},
+    'course3-title':{'en':'Career Essentials in GitHub Professional Certificate','pt':'Career Essentials in GitHub Professional Certificate'},
     'course3-desc':{'en':'Description for course three.','pt':'Descri\u00E7\u00E3o do curso tr\u00EAs.'},
-    'contact-title':{'en':'Contact Me','pt':'Contate-Me'}
+    'course4-title':{'en':'[In-person Course, Atlanta] Artificial Intelligence Certificate - Marketing Professionals','pt':'[In-person Course, Atlanta] Artificial Intelligence Certificate - Marketing Professionals'},
+    'course4-desc':{'en':'Description for course one.','pt':'Descri\u00E7\u00E3o do curso um.'},
+    'course5-title':{'en':'Google Foundations of Cybersecurity','pt':'Google Foundations of Cybersecurity'},
+    'course5-desc':{'en':'Description for course two.','pt':'Descri\u00E7\u00E3o do curso dois.'},
+    'course6-title':{'en':'Power BI | Projects','pt':'Power BI | Projects'},
+    'course6-desc':{'en':'Description for course three.','pt':'Descri\u00E7\u00E3o do curso tr\u00EAs.'},
+    'contact-title':{'en':'Contact Me','pt':'Contate-Me'},
+    'nav-home':{'en':'Home','pt':'In\u00EDcio'},
+    'nav-about':{'en':'About','pt':'Sobre'},
+    'nav-projects':{'en':'Projects','pt':'Projetos'},
+    'nav-resume':{'en':'Resume','pt':'Curr\u00EDculo'},
+    'nav-courses':{'en':'Courses & Certificates','pt':'Cursos & Certificados'},
+    'nav-contact':{'en':'Contact','pt':'Contato'},
+    'btn-resume':{'en':'Resume','pt':'Curr\u00EDculo'},
+    'btn-portfolio':{'en':'Portfolio','pt':'Portf\u00F3lio'},
+    'btn-repo':{'en':'Visit GitHub Repository','pt':'Ver no GitHub'},
+    'btn-cert':{'en':'Click to view certificate','pt':'Clique para ver o certificado'},
+    'btn-send':{'en':'Send','pt':'Enviar'},
+    'about-text1':{'en':'Computer Science & Business Graduate from Hanover College, Indiana, USA, passionate about leveraging technology to drive innovation and make meaningful social impact. I am committed to continuous learning and consistently seeking to grow technically and professionally.','pt':'Graduado em Computa\u00E7\u00E3o e Neg\u00F3cios pelo Hanover College, Indiana, EUA. Sou apaixonado por usar tecnologia para impulsionar inova\u00E7\u00E3o e impacto social. Busco aprendizado cont\u00EDnuo e crescimento t\u00E9cnico-profissional.'},
+    'about-text2':{'en':'My academic experience includes software development, web and mobile applications, algorithm analysis, data structures, databases, information security, cloud computing, and artificial intelligence (with a focus on generative AI). At the same time, my Business major strengthened my skills in marketing strategy, management, financial analysis, and business law, enabling me to bridge technical expertise with business insights.','pt':'Minha forma\u00E7\u00E3o abrange desenvolvimento de software, aplica\u00E7\u00F5es web e mobile, an\u00E1lise de algoritmos, estruturas de dados, bancos de dados, seguran\u00E7a da informa\u00E7\u00E3o, computa\u00E7\u00E3o em nuvem e intelig\u00EAncia artificial (com foco em IA generativa). Em Administra\u00E7\u00E3o, aprofundei estrat\u00E9gias de marketing, gest\u00E3o, an\u00E1lise financeira e direito empresarial, conectando conhecimento t\u00E9cnico a vis\u00E3o de neg\u00F3cios.'},
+    'skillsTech':{'en':'Key Skills & Technologies','pt':'Principais Habilidades e Tecnologias'},
+    'cat-algorithms':{'en':'Algorithm Analysis','pt':'An\u00E1lise de Algoritmos'},
+    'cat-ai':{'en':'Artificial Intelligence','pt':'Intelig\u00EAncia Artificial'},
+    'cat-mobile':{'en':'Mobile Applications','pt':'Aplicativos Mobile'},
+    'cat-web':{'en':'Web Development','pt':'Desenvolvimento Web'},
+    'cat-blockchain':{'en':'Blockchain & Cryptocurrency','pt':'Blockchain e Criptomoedas'},
+    'cat-iot':{'en':'Networks and IoT','pt':'Redes e IoT'},
+    'cat-cyber':{'en':'Cybersecurity','pt':'Ciberseguran\u00E7a'},
+    'cat-game':{'en':'Game Development','pt':'Desenvolvimento de Jogos'},
+    'cat-desktop':{'en':'Desktop Applications','pt':'Aplicativos Desktop'},
+    'resume-en-btn':{'en':'English Version','pt':'Vers\u00E3o em Ingl\u00EAs'},
+    'resume-pt-btn':{'en':'Portuguese Version','pt':'Vers\u00E3o em Portugu\u00EAs'}
 };
 function translate(){
     document.querySelectorAll('[data-lang]').forEach(el=>{
         const key=el.getAttribute('data-lang');
         if(translations[key]) el.textContent=translations[key][currentLang];
     });
-    langToggle.textContent=currentLang==='en'?'Traduzir para o ingl\u00EAs':'Translate to Portuguese';
+    langToggle.textContent=currentLang==='en'?'Traduzir para o portugu\u00EAs':'Translate to English';
 }
 langToggle.addEventListener('click',()=>{
     currentLang=currentLang==='en'?'pt':'en';
@@ -141,6 +172,15 @@ function toggleDescription(card){
 document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',()=>toggleDescription(card));
 });
+
+// Resume image toggle
+const resumeImg=document.getElementById('resume-img');
+const resumeEnBtn=document.getElementById('resume-en-btn');
+const resumePtBtn=document.getElementById('resume-pt-btn');
+if(resumeEnBtn&&resumePtBtn&&resumeImg){
+    resumeEnBtn.addEventListener('click',()=>{resumeImg.src='assets/images/CaioResumeCS.png';});
+    resumePtBtn.addEventListener('click',()=>{resumeImg.src='assets/images/caioPortugueseCV.png';});
+}
 
 // Contact form submit
 const contactForm = document.getElementById('contact-form');

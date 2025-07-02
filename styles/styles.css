@@ -172,3 +172,22 @@ body {
 .resume-img:hover {
     transform: scale(1.03);
 }
+
+
+/* Project cards */
+.project-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+.project-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.project-card .repo-btn{
+    margin-top:auto;
+}
+#projects .grid{
+    grid-auto-rows:1fr;
+}
