@@ -191,3 +191,16 @@ body {
 #projects .grid{
     grid-auto-rows:1fr;
 }
+
+/* Course cards */
+.course-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+.course-card .cert-btn{
+    margin-top:auto;
+}
+#courses .grid{
+    grid-auto-rows:1fr;
+}
