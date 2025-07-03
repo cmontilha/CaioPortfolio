@@ -204,3 +204,10 @@ body {
 #courses .grid{
     grid-auto-rows:1fr;
 }
+
+.glowing-line {
+    border: none;
+    height: 2px;
+    background: #00ffff;
+    box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+}
