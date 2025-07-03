@@ -186,14 +186,3 @@ if(resumeEnBtn&&resumePtBtn&&resumeImg){
     resumePtBtn.addEventListener('click',()=>{resumeImg.src='assets/images/caioPortugueseCV.png';});
 }
 
-// Contact form submit
-const contactForm = document.getElementById('contact-form');
-if(contactForm){
-  const msg = document.getElementById('form-msg');
-  contactForm.addEventListener('submit',e=>{
-    e.preventDefault();
-    fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}})
-      .then(()=>{msg.textContent='Message sent!';msg.classList.remove('hidden');contactForm.reset();})
-      .catch(()=>{msg.textContent='Error sending message';msg.classList.remove('hidden');});
-  });
-}
