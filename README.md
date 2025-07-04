@@ -57,4 +57,4 @@ Thank you for your interest in my portfolio. Feel free to reach out! I am open t
 
 ## 📄 License
 
-Created by Caio Montilha. This project is licensed under the MIT License.  
+⚠️ This project is proprietary. Any use, reproduction, or redistribution is strictly prohibited without prior written permission from the author.  
