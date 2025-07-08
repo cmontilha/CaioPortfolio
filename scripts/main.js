@@ -177,12 +177,21 @@ document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',()=>toggleDescription(card));
 });
 
-// Resume image toggle
-const resumeImg=document.getElementById('resume-img');
-const resumeEnBtn=document.getElementById('resume-en-btn');
-const resumePtBtn=document.getElementById('resume-pt-btn');
-if(resumeEnBtn&&resumePtBtn&&resumeImg){
-    resumeEnBtn.addEventListener('click',()=>{resumeImg.src='assets/images/CaioResumeCS.png';});
-    resumePtBtn.addEventListener('click',()=>{resumeImg.src='assets/images/caioPortugueseCV.png';});
+// Resume image and link toggle
+const resumeImg = document.getElementById('resume-img');
+const resumeEnBtn = document.getElementById('resume-en-btn');
+const resumePtBtn = document.getElementById('resume-pt-btn');
+const resumeLink = resumeImg?.parentElement;
+
+if (resumeEnBtn && resumePtBtn && resumeImg && resumeLink) {
+    resumeEnBtn.addEventListener('click', () => {
+        resumeImg.src = 'assets/images/CaioResumeCS.png';
+        resumeLink.href = 'assets/pdf/CaioMontilhaCSResume2025Updated.pdf';
+    });
+
+    resumePtBtn.addEventListener('click', () => {
+        resumeImg.src = 'assets/images/caioPortugueseCV.png';
+        resumeLink.href = 'assets/pdf/CaioMontilhaCurriculo2025.pdf';
+    });
 }
 
