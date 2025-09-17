@@ -188,13 +188,13 @@ const resumeLink = resumeImg?.parentElement;
 
 if (resumeEnBtn && resumePtBtn && resumeImg && resumeLink) {
     resumeEnBtn.addEventListener('click', () => {
-        resumeImg.src = 'assets/images/CaioResumeCS.png';
+        resumeImg.src = 'assets/images/CaioMontilhaResume.png';
         resumeLink.href = 'assets/pdf/CaioMontilhaCSResume2025Updated.pdf';
     });
 
     resumePtBtn.addEventListener('click', () => {
-        resumeImg.src = 'assets/images/caioPortugueseCV.png';
-        resumeLink.href = 'assets/pdf/CaioMontilhaCurriculo2025.pdf';
+        resumeImg.src = 'assets/images/CaioMontilhaCurrículo.png';
+        resumeLink.href = 'assets/pdf/CaioMontilhaCurrículo2025Atualizado.pdf';
     });
 }
 
