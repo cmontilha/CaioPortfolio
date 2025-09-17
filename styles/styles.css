@@ -214,3 +214,66 @@ body {
 
 
 
+
+/* Electric border effect mais discreto */
+.card-container {
+    --glow-start: #172554; /* azul navy bem escuro */
+    --glow-end: #1e40af;   /* azul profundo */
+    --glow-shadow: rgba(30, 64, 175, 0.18); /* sombra bem leve */
+    --card-radius: clamp(18px, 4vw, 24px);
+
+    position: relative;
+    display: flex;
+    height: 100%;
+    padding: 2px;
+    border-radius: var(--card-radius);
+    background: linear-gradient(135deg, var(--glow-start), var(--glow-end));
+    box-shadow: 0 0 6px var(--glow-shadow); /* sombra quase imperceptível */
+    isolation: isolate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container::before,
+.card-container::after {
+    content: "";
+    position: absolute;
+    inset: -4px; /* área menor de sombra */
+    border-radius: calc(var(--card-radius) + 6px);
+    background: linear-gradient(135deg, var(--glow-start), var(--glow-end));
+    pointer-events: none;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.card-container::before {
+    z-index: -2;
+    filter: blur(6px); /* bem menos blur */
+    opacity: 0.35;
+}
+
+.card-container::after {
+    z-index: -3;
+    filter: blur(12px); /* bem menos blur */
+    opacity: 0.15;
+}
+
+.card-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px var(--glow-shadow); /* hover levemente mais forte */
+}
+
+.card-container:hover::before {
+    opacity: 0.45;
+    filter: blur(8px);
+}
+
+.card-container:hover::after {
+    opacity: 0.25;
+    filter: blur(14px);
+}
+
+.card-container > .card {
+    flex: 1;
+    border-radius: calc(var(--card-radius) - 4px);
+    background: rgba(17, 24, 39, 0.96);
+    backdrop-filter: blur(2px);
+}
