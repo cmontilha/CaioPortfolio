@@ -252,8 +252,10 @@ document.querySelectorAll('.card').forEach(card=>{
             openProjectModal(card);
             return;
         }
-        const p=card.querySelector('p');
-        if (p) p.classList.toggle('hidden');
+        if (card.closest('#courses')) {
+            const p=card.querySelector('p');
+            if (p) p.classList.toggle('hidden');
+        }
     });
 });
 
