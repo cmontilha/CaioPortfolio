@@ -201,13 +201,72 @@ langToggle.addEventListener('click',()=>{
 translate();
 
 // Expandable project and course descriptions
-function toggleDescription(card){
-    const p=card.querySelector('p');
-    p.classList.toggle('hidden');
+const projectModal = document.getElementById('project-modal');
+const projectModalTitle = document.getElementById('project-modal-title');
+const projectModalImages = document.getElementById('project-modal-images');
+const projectModalDescription = document.getElementById('project-modal-description');
+const projectModalAction = document.getElementById('project-modal-action');
+
+function closeProjectModal(){
+    if (!projectModal) return;
+    projectModal.classList.remove('active');
+    projectModal.setAttribute('aria-hidden','true');
+    projectModalImages.innerHTML='';
+    projectModalDescription.textContent='';
+    projectModalTitle.textContent='';
+    projectModalAction.onclick=null;
 }
+
+function openProjectModal(card){
+    if (!projectModal || !projectModalTitle || !projectModalImages || !projectModalDescription || !projectModalAction) return;
+    const titleEl = card.querySelector('h4, h3');
+    const descEl = card.querySelector('p');
+    const images = card.querySelectorAll('img');
+    const actionBtn = card.querySelector('.repo-btn');
+
+    projectModalTitle.textContent = titleEl ? titleEl.textContent : 'Project';
+    projectModalDescription.textContent = descEl ? descEl.textContent.trim() : '';
+    projectModalImages.innerHTML = '';
+    images.forEach(img => {
+        const modalImg = document.createElement('img');
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || projectModalTitle.textContent;
+        projectModalImages.appendChild(modalImg);
+    });
+    if (actionBtn) {
+        projectModalAction.style.display = 'inline-flex';
+        projectModalAction.textContent = actionBtn.textContent;
+        projectModalAction.onclick = () => actionBtn.click();
+    } else {
+        projectModalAction.style.display = 'none';
+    }
+
+    projectModal.classList.add('active');
+    projectModal.setAttribute('aria-hidden','false');
+}
+
 document.querySelectorAll('.card').forEach(card=>{
-    card.addEventListener('click',()=>toggleDescription(card));
+    card.addEventListener('click',(event)=>{
+        if (event.target.closest('button, a')) return;
+        if (card.closest('#projects')) {
+            openProjectModal(card);
+            return;
+        }
+        const p=card.querySelector('p');
+        if (p) p.classList.toggle('hidden');
+    });
 });
+
+if (projectModal) {
+    projectModal.addEventListener('click',(event)=>{
+        if (event.target.closest('[data-modal-close="true"]')) {
+            closeProjectModal();
+        }
+    });
+    document.addEventListener('keydown',(event)=>{
+        if (event.key === 'Escape') closeProjectModal();
+    });
+}
 
 // Resume image and link toggle
 const resumeImg = document.getElementById('resume-img');
