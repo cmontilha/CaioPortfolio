@@ -109,7 +109,7 @@
         <!-- Projects -->
         <section id="projects" class="py-20" data-aos="fade-up">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center" data-lang="projects-title">Projects</h2>
+                <h2 class="text-3xl font-bold mb-8 text-center projects-title" data-lang="projects-title">Projects</h2>
                 <div class="space-y-12">
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 neon" data-lang="cat-algorithms">Algorithm Analysis</h3>
@@ -692,20 +692,22 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="py-20 bg-black" data-aos="fade-up">
+        <section id="contact" class="py-20 contact-bg" data-aos="fade-up">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-8" data-lang="contact-title">Contact Me</h2>
-                <form id="contact-form" class="max-w-xl mx-auto space-y-4" action="https://formspree.io/f/xanjkjwg" method="POST">
-                    <input name="name" type="text" placeholder="Name" class="input" required>
-                    <input name="email" type="email" placeholder="Email" class="input" required>
-                    <textarea name="message" placeholder="Message" class="input" required></textarea>
-                    <button type="submit" class="btn w-full" data-lang="btn-send">Send</button>
-                    <p id="form-msg" class="hidden mt-2 text-green-400">Message sent!</p>
-                </form>
-                <div class="mt-6 flex justify-center space-x-4">
-                    <a href="https://www.linkedin.com/in/caio-montilha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social">LinkedIn</a>
-                    <a href="https://github.com/cmontilha" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social">GitHub</a>
-                    <a href="mailto:caiomontilha.cm@gmail.com" aria-label="Email" class="social">caiomontilha.cm@gmail.com</a>
+                <div class="contact-panel">
+                    <form id="contact-form" class="max-w-xl mx-auto space-y-4" action="https://formspree.io/f/xanjkjwg" method="POST">
+                        <input name="name" type="text" placeholder="Name" class="input" required>
+                        <input name="email" type="email" placeholder="Email" class="input" required>
+                        <textarea name="message" placeholder="Message" class="input" required></textarea>
+                        <button type="submit" class="btn w-full" data-lang="btn-send">Send</button>
+                        <p id="form-msg" class="hidden mt-2 text-green-400">Message sent!</p>
+                    </form>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <a href="https://www.linkedin.com/in/caio-montilha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social">LinkedIn</a>
+                        <a href="https://github.com/cmontilha" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social">GitHub</a>
+                        <a href="mailto:caiomontilha.cm@gmail.com" aria-label="Email" class="social">caiomontilha.cm@gmail.com</a>
+                    </div>
                 </div>
             </div>
         </section>

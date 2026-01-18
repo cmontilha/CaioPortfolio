@@ -488,6 +488,30 @@ body {
     justify-content:center;
     margin-top:0.5rem;
 }
+
+/* Projects heading */
+.projects-title{
+    color:#f8fafc;
+    text-shadow:0 0 8px rgba(255,255,255,0.15);
+}
+
+/* Contact background */
+.contact-bg{
+    background:linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)), url("../assets/images/ambiente.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.contact-panel{
+    max-width:600px;
+    margin:0 auto;
+    padding:2rem 2.5rem;
+    background:rgba(15,23,42,0.68);
+    border:1px solid rgba(148,163,184,0.25);
+    border-radius:1rem;
+    box-shadow:0 0 14px rgba(0,255,255,0.12);
+    backdrop-filter:blur(8px);
+}
 .glowing-line {
     border: none;
     height: 2px;
