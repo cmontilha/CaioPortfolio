@@ -403,6 +403,56 @@ body {
     box-shadow:0 0 14px rgba(0,255,255,0.2);
 }
 
+/* Home section */
+.hero-section{
+    padding:2rem 1rem;
+}
+.hero-panel{
+    width:min(900px, 95vw);
+}
+.hero-card{
+    padding:2.5rem 2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.75rem;
+    text-align:center;
+}
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:0.4rem;
+    font-size:0.85rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#7dd3fc;
+    padding:0.35rem 0.9rem;
+    border:1px solid rgba(56,189,248,0.4);
+    border-radius:999px;
+    background:rgba(2,132,199,0.12);
+}
+.hero-avatar{
+    box-shadow:0 0 18px rgba(0,255,255,0.25);
+}
+.hero-tagline{
+    color:#94a3b8;
+    font-size:1rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.hero-actions{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.hero-social{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    justify-content:center;
+    margin-top:0.5rem;
+}
 .glowing-line {
     border: none;
     height: 2px;
