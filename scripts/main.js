@@ -192,6 +192,9 @@ function translate(){
         const key=el.getAttribute('data-lang');
         if(translations[key]) el.textContent=translations[key][currentLang];
     });
+    document.querySelectorAll('[data-desc-en][data-desc-pt]').forEach(el=>{
+        el.textContent = currentLang === 'pt' ? el.dataset.descPt : el.dataset.descEn;
+    });
     langToggle.textContent=currentLang==='en'?'Traduzir para o portugu\u00EAs':'Translate to English';
 }
 langToggle.addEventListener('click',()=>{
