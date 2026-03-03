@@ -2,6 +2,11 @@
 const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.getElementById('nav-links');
 menuBtn.addEventListener('click', () => navLinks.classList.toggle('hidden'));
+const projectsTitleCount = document.getElementById('projects-title-count');
+if (projectsTitleCount) {
+    const totalProjects = document.querySelectorAll('#projects .project-card').length;
+    projectsTitleCount.textContent = `(${totalProjects})`;
+}
 
 // Canvas background particles
 const canvas = document.getElementById('bg-canvas');

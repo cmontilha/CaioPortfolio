@@ -631,6 +631,11 @@ body {
     color:#f8fafc;
     text-shadow:0 0 8px rgba(255,255,255,0.15);
 }
+.projects-count{
+    color:#7dd3fc;
+    font-weight:600;
+    text-shadow:0 0 6px rgba(125,211,252,0.32);
+}
 
 /* Contact background */
 .contact-bg{
