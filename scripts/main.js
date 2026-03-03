@@ -79,7 +79,7 @@ document.querySelectorAll('a,button').forEach(el=>{
 
 // Language toggle
 const langToggle=document.getElementById('lang-toggle');
-let currentLang='en';
+let currentLang='pt';
 const translations={
     'hero-title':{'en':'Tech & Business Communicator | Junior Full-Stack Developer | AI & Data Analytics','pt':'Comunicador de Tecnologia e Negócios | Desenvolvedor Full-Stack Júnior | IA & Análise de Dados'},
     'about-title':{'en':'About Me','pt':'Sobre Mim'},
@@ -102,7 +102,7 @@ const translations={
     'experience-title':{'en':'Experience','pt':'Experi\u00EAncia'},
     'exp-hub-role':{'en':'Data Analyst & AI Developer Jr.','pt':'Data Analyst & AI Developer Jr.'},
     'exp-hub-company':{'en':'HUB Brasil · Full-time','pt':'HUB Brasil · Tempo integral'},
-    'exp-hub-date':{'en':'Aug 2025 - Present · 6 months','pt':'Ago de 2025 - o momento · 6 meses'},
+    'exp-hub-date':{'en':'Aug 2025 - Apr 2026 · 9 months','pt':'Ago de 2025 - Abr de 2026 · 9 meses'},
     'exp-hub-location':{'en':'S\u00E3o Paulo, Brazil · On-site','pt':'S\u00E3o Paulo, Brasil · Presencial'},
     'exp-hub-summary':{'en':'At HUB Brasil, I work as a Data Analyst & AI Developer Jr. at the intersection of analytics, data engineering, and development, delivering automations, dashboards, and AI solutions to support decisions and accelerate routines.','pt':'Na HUB Brasil, atuo como Data Analyst & AI Developer Jr., na interse\u00E7\u00E3o de analytics, engenharia de dados e desenvolvimento, entregando automa\u00E7\u00F5es, dashboards e solu\u00E7\u00F5es com IA para suportar decis\u00F5es e acelerar rotinas.'},
     'exp-hub-responsibilities':{'en':'Key responsibilities and deliveries:','pt':'Principais responsabilidades e entregas:'},
