@@ -386,9 +386,57 @@ body {
 
 /* Experience section */
 .experience-grid{
+    --timeline-pad:6.2rem;
+    --timeline-x:5.25rem;
+    --timeline-track-offset:calc(var(--timeline-x) - var(--timeline-pad));
+    --timeline-year-gap:1.55rem;
+    --timeline-dot:1.05rem;
+    position:relative;
     display:flex;
     flex-direction:column;
-    gap:2rem;
+    gap:2.2rem;
+    padding-left:var(--timeline-pad);
+}
+.experience-grid::before{
+    content:"";
+    position:absolute;
+    left:var(--timeline-x);
+    top:0.5rem;
+    bottom:0.5rem;
+    width:2px;
+    border-radius:999px;
+    background:linear-gradient(180deg, rgba(45,212,191,0.95) 0%, rgba(56,189,248,0.95) 45%, rgba(168,85,247,0.85) 100%);
+    box-shadow:0 0 10px rgba(56,189,248,0.45);
+}
+.experience-timeline-item{
+    position:relative;
+}
+.experience-dot{
+    position:absolute;
+    left:calc(var(--timeline-track-offset) - (var(--timeline-dot) / 2));
+    top:1.9rem;
+    width:var(--timeline-dot);
+    height:var(--timeline-dot);
+    border-radius:999px;
+    border:2px solid rgba(34,211,238,0.95);
+    background:radial-gradient(circle, rgba(15,23,42,1) 30%, rgba(59,130,246,0.65) 100%);
+    box-shadow:0 0 0 4px rgba(15,23,42,0.85), 0 0 10px rgba(56,189,248,0.5);
+    pointer-events:none;
+    z-index:3;
+}
+.experience-year{
+    position:absolute;
+    right:calc(100% + var(--timeline-year-gap));
+    top:1.55rem;
+    min-width:4.25rem;
+    text-align:right;
+    font-size:0.76rem;
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:#bae6fd;
+    background:transparent;
+    pointer-events:none;
+    z-index:4;
 }
 .experience-card{
     display:flex;
@@ -473,6 +521,21 @@ body {
     color:#cbd5f5;
 }
 @media (min-width: 768px){
+    .experience-grid{
+        --timeline-pad:6.9rem;
+        --timeline-x:5.9rem;
+        --timeline-track-offset:calc(var(--timeline-x) - var(--timeline-pad));
+        --timeline-year-gap:1.45rem;
+        --timeline-dot:1.2rem;
+    }
+    .experience-dot{
+        top:2.1rem;
+    }
+    .experience-year{
+        top:1.78rem;
+        min-width:4.5rem;
+        font-size:0.8rem;
+    }
     .experience-header{
         flex-direction:row;
         justify-content:space-between;
