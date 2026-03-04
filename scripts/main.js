@@ -302,7 +302,7 @@ if (resumeEnBtn && resumePtBtn && resumeImg && resumeLink) {
     });
 
     resumePtBtn.addEventListener('click', () => {
-        resumeImg.src = 'assets/images/CaioMontilhaCurrículo2026.png';
-        resumeLink.href = 'assets/pdf/CaioMontilhaCurrículo2026.pdf';
+        resumeImg.src = 'assets/images/CaioMontilhaCurriculo2026.png';
+        resumeLink.href = 'assets/pdf/CaioMontilhaCurriculo2026.pdf';
     });
 }
