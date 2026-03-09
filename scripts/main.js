@@ -98,6 +98,9 @@ const translations={
     'project2-desc':{'en':'Description for project two.','pt':'Descri\u00E7\u00E3o do projeto dois.'},
     'project3-title':{'en':'Project Three','pt':'Projeto Tr\u00EAs'},
     'project3-desc':{'en':'Description for project three.','pt':'Descri\u00E7\u00E3o do projeto tr\u00EAs.'},
+    'project-aws-study-hub-title':{'en':'My AWS Study Hub','pt':'Meu Hub de Estudos AWS'},
+    'project-car-dealerships-title':{'en':'Car Dealerships CM','pt':'Concessionarias CM'},
+    'project-etechshopping-title':{'en':'E-TechShopping','pt':'E-TechShopping'},
     'resume-title':{'en':'Resume','pt':'Curr\u00EDculo'},
     'software-skills':{'en':'Software Skills','pt':'Habilidades de Software'},
     'languages':{'en':'Languages','pt':'Idiomas'},
@@ -210,6 +213,9 @@ function translate(){
     });
     document.querySelectorAll('[data-desc-en][data-desc-pt]').forEach(el=>{
         el.textContent = currentLang === 'pt' ? el.dataset.descPt : el.dataset.descEn;
+    });
+    document.querySelectorAll('[data-alt-en][data-alt-pt]').forEach(el=>{
+        el.alt = currentLang === 'pt' ? el.dataset.altPt : el.dataset.altEn;
     });
     langToggle.textContent=currentLang==='en'?'Traduzir para o portugu\u00EAs':'Translate to English';
 }
