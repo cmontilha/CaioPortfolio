@@ -86,7 +86,7 @@ document.querySelectorAll('a,button').forEach(el=>{
 const langToggle=document.getElementById('lang-toggle');
 let currentLang='pt';
 const translations={
-    'hero-title':{'en':'Tech & Business Communicator | Junior Full-Stack Developer | AI & Data Analytics','pt':'Comunicador de Tecnologia e Negócios | Desenvolvedor Full-Stack Júnior | IA & Análise de Dados'},
+    'hero-title':{'en':'Technology & Business Communicator | Full-Stack Developer | AI & Data Analytics','pt':'Soluções de Tecnologia e Negócios | Desenvolvedor Full-Stack | IA & Dados'},
     'hero-label':{'en':'Profile','pt':'Perfil'},
     'about-title':{'en':'About Me','pt':'Sobre Mim'},
     'about-location':{'en':'Location: S\u00E3o Paulo, Brazil','pt':'Localiza\u00E7\u00E3o: S\u00E3o Paulo, Brasil'},
@@ -172,6 +172,7 @@ const translations={
     'nav-contact':{'en':'Contact','pt':'Contato'},
     'btn-resume':{'en':'Resume','pt':'Curr\u00EDculo'},
     'btn-portfolio':{'en':'Portfolio','pt':'Portf\u00F3lio'},
+    'btn-github':{'en':'GitHub','pt':'GitHub'},
     'btn-repo':{'en':'Visit GitHub Repository','pt':'Ver no GitHub'},
     'btn-cert':{'en':'Click to view certificate','pt':'Clique para ver o certificado'},
     'btn-send':{'en':'Send','pt':'Enviar'},
