@@ -86,7 +86,7 @@ document.querySelectorAll('a,button').forEach(el=>{
 const langToggle=document.getElementById('lang-toggle');
 let currentLang='pt';
 const translations={
-    'hero-title':{'en':'Technology & Business Communicator | Full-Stack Developer | AI & Data Analytics','pt':'Soluções de Tecnologia e Negócios | Desenvolvedor Full-Stack | IA & Dados'},
+    'hero-title':{'en':'Technology & Business Communicator | Full-Stack Developer | AI & Data Analytics','pt':'AI & Dados | Automação de Processos | Desenvolvedor de Software'},
     'hero-label':{'en':'Profile','pt':'Perfil'},
     'about-title':{'en':'About Me','pt':'Sobre Mim'},
     'about-location':{'en':'Location: S\u00E3o Paulo, Brazil','pt':'Localiza\u00E7\u00E3o: S\u00E3o Paulo, Brasil'},
@@ -161,7 +161,7 @@ const translations={
     'course1-desc':{'en':'Description for course one.','pt':'Descri\u00E7\u00E3o do curso um.'},
     'course2-title':{'en':'Agile Software Development Certificate','pt':'Agile Software Development Certificate'},
     'course2-desc':{'en':'Description for course two.','pt':'Descri\u00E7\u00E3o do curso dois.'},
-    'course3-title':{'en':'Career Essentials in GitHub Professional Certificate','pt':'Career Essentials in GitHub Professional Certificate'},
+    'course3-title':{'en':'AWS Certified Cloud Practitioner','pt':'AWS Certified Cloud Practitioner'},
     'course3-desc':{'en':'Description for course three.','pt':'Descri\u00E7\u00E3o do curso tr\u00EAs.'},
     'course4-title':{'en':'[In-person Course, Atlanta] Artificial Intelligence Certificate - Marketing Professionals','pt':'[In-person Course, Atlanta] Artificial Intelligence Certificate - Marketing Professionals'},
     'course4-desc':{'en':'Description for course one.','pt':'Descri\u00E7\u00E3o do curso um.'},
@@ -199,7 +199,7 @@ const translations={
     'alg-label':{'en':'Algorithms & Data Structures:','pt':'Algoritmos e Estruturas de Dados:'},
     'alg-desc':{'en':'Algorithm Analysis, Sorting and Searching Algorithms, Linear and Non-Linear Structures.','pt':'Análise de Algoritmos, Algoritmos de Ordenação e Busca, Estruturas Lineares e Não Lineares.'},
     'cloud-label':{'en':'Cloud & DevOps:','pt':'Cloud & DevOps:'},
-    'cloud-desc':{'en':'Google Cloud Platform (GCP), Docker.','pt':'Google Cloud Platform (GCP), Docker.'},
+    'cloud-desc':{'en':'Google Cloud Platform (GCP), Amazon Web Services (AWS), Docker.','pt':'Google Cloud Platform (GCP), Amazon Web Services (AWS), Docker.'},
     'business-title':{'en':'Business Administration & Strategy','pt':'Administração e Estratégia de Negócios'},
     'business-desc':{'en':'Marketing, Management and Financial Analysis, Business Law and Ethics, Excel, Power BI, Looker Studio.','pt':'Marketing, Gestão e Análise Financeira, Direito e Ética Empresarial, Excel, Power BI, Looker Studio.'},
     'languages-title':{'en':'Languages','pt':'Idiomas'},
