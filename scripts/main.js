@@ -184,6 +184,7 @@ const translations={
     'btn-portfolio':{'en':'Portfolio','pt':'Portf\u00F3lio'},
     'btn-github':{'en':'GitHub','pt':'GitHub'},
     'btn-repo':{'en':'Visit GitHub Repository','pt':'Ver no GitHub'},
+    'btn-dashboard':{'en':'View Dashboard','pt':'Visualizar Dashboard'},
     'btn-cert':{'en':'Click to view certificate','pt':'Clique para ver o certificado'},
     'btn-send':{'en':'Send','pt':'Enviar'},
     'about-text1':{'en':'Computer Science & Business Graduate from Hanover College, Indiana, USA, passionate about leveraging technology to drive innovation and make meaningful social impact. I am committed to continuous learning and consistently seeking to grow technically and professionally.','pt':'Possuo bacharelado internacional (USA) em Ciência da Computação & Administração pela faculdade de Hanover nos (USA). Sou apaixonado por usar tecnologia para impulsionar inovação e impacto social, com foco em aprendizado contínuo e crescimento técnico-profissional.'},
@@ -209,7 +210,8 @@ const translations={
     'cat-ai':{'en':'Artificial Intelligence','pt':'Intelig\u00EAncia Artificial'},
     'cat-mobile':{'en':'Mobile Applications','pt':'Aplicativos Mobile'},
     'cat-web':{'en':'Web Development','pt':'Desenvolvimento Web'},
-    'cat-blockchain':{'en':'Blockchain & Cryptocurrency','pt':'Blockchain e Criptomoedas'},
+    'cat-dashboards':{'en':'Dashboards & BI','pt':'Dashboards e BI'},
+    'cat-blockchain':{'en':'Blockchain, Crypto & Cybersecurity','pt':'Blockchain, Cripto e Cibersegurança'},
     'cat-iot':{'en':'Networks and IoT','pt':'Redes e IoT'},
     'cat-cyber':{'en':'Cybersecurity','pt':'Ciberseguran\u00E7a'},
     'cat-game':{'en':'Game Development','pt':'Desenvolvimento de Jogos'},
@@ -284,6 +286,7 @@ function openProjectModal(card){
 document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',(event)=>{
         if (event.target.closest('button, a')) return;
+        if (card.dataset.noModal === 'true') return;
         if (card.closest('#projects')) {
             openProjectModal(card);
             return;
